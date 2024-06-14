@@ -8,7 +8,7 @@ const DeliveryGuy = () => {
 
   const fetchOrders = () => {
     axios
-      .get("http://localhost:3001/deliveryguys")
+      .get("https://ziggy-1-taik.onrender.com/deliveryguys")
       .then((response) => {
         console.log(response.data.delivery);
         setDeliveryGuys(response.data.delivery);
@@ -20,7 +20,7 @@ const DeliveryGuy = () => {
 
   const delivered = (key) => {
     console.log(key);
-    axios.post("http://localhost:3001/delivered",{id:key}).then((response) => {
+    axios.post("https://ziggy-1-taik.onrender.com/delivered",{id:key}).then((response) => {
       console.log("Order delivered")
       alert(response.data.message)
     });

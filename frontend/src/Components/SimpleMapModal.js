@@ -22,7 +22,7 @@ export default function SimpleMapModal(props) {
   const Submit = () => {
     console.log(dish, quantity, marker);
     axios
-      .post("http://localhost:3001/order", {
+      .post("https://ziggy-1-taik.onrender.com/order", {
         dish: dish,
         marker: marker,
         quantity: quantity,

@@ -7,7 +7,7 @@ const UnassignedOrder = () => {
 
   const fetchOrders = () => {
     axios
-      .get("http://localhost:3001/current")
+      .get("https://ziggy-1-taik.onrender.com/current")
       .then((response) => {
         setAssigned(response.data.assignedOrders);
         setUnassigned(response.data.unassignedOrders)
