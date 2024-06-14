@@ -9,7 +9,7 @@ const CreateOrder = () => {
 
   return (
     <div className="w-50">
-      <Form className="mx-1">
+      <Form className="mx-4">
         <Row className="my-1">
           <Col>
             <Form.Group>

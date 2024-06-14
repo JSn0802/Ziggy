@@ -20,10 +20,12 @@ const DeliveryGuy = () => {
 
   const delivered = (key) => {
     console.log(key);
-    axios.post("https://ziggy-1-taik.onrender.com/delivered",{id:key}).then((response) => {
-      console.log("Order delivered")
-      alert(response.data.message)
-    });
+    axios
+      .post("https://ziggy-1-taik.onrender.com/delivered", { id: key })
+      .then((response) => {
+        console.log("Order delivered");
+        alert(response.data.message);
+      });
   };
 
   useEffect(() => {
@@ -44,11 +46,11 @@ const DeliveryGuy = () => {
             <Card
               id={key}
               style={{
-                width: "25%",
+                width: `${100 / deliveryGuys.length - 5}%`,
                 display: "inline-block",
                 marginTop: "1rem",
                 marginRight: "1rem",
-                marginLeft:"1rem"
+                marginLeft: "2rem",
               }}
             >
               <Card.Img variant="top" src="/DeliveryGuy.png" />
@@ -63,7 +65,9 @@ const DeliveryGuy = () => {
                     <Col>Distance:</Col>
                     <Col></Col>
                     <Col>
-                      {child.distance?Math.ceil(child.distance*1000) + " Mtrs":"-"}
+                      {child.distance
+                        ? Math.ceil(child.distance * 1000) + " Mtrs"
+                        : "-"}
                     </Col>
                   </Row>
                   <Row>

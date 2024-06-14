@@ -5,7 +5,7 @@ import UnassignedOrder from "./Components/UnassignedOrder";
 function App() {
   
   return (
-    <div className="App">
+    <div style={{overflowX:"hidden"}}>
       <CreateOrder />
       <DeliveryGuy />
       <UnassignedOrder/>
