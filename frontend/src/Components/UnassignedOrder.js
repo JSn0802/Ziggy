@@ -27,7 +27,8 @@ const UnassignedOrder = () => {
     }, 5000); // fetch every 5 seconds
 
     return () => clearInterval(interval);
-  });
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <Row style={{ marginTop: "10px" }}>
